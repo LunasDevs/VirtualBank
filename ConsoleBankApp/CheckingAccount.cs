@@ -1,12 +1,14 @@
+using ConsoleBankApp.Aggregates;
 using System.Collections.Generic;
 
 namespace DataCanVirtualBank{
 
-    public class CheckingAccount{
+    public class CheckingAccount: ICheckingAccountAggregate
+    {
         private int _accountId;
         private float _balance;
-        //public List<ExchangeRate> ExchangeRates = new List<ExchangeRate>();
-        
+        public readonly ICheckingAccountAggregate _checkingAggregate;
+
         //Getters
         public int GetAccountId()
         {
@@ -25,7 +27,9 @@ namespace DataCanVirtualBank{
             _balance = balance;
         }
 
-        public CheckingAccount(){}
+        public CheckingAccount(ICheckingAccountAggregate checkingAccountAggregate) {
+            _checkingAggregate = checkingAccountAggregate;
+        }
         public CheckingAccount(int id){
             this._accountId = id;
         }
@@ -37,65 +41,47 @@ namespace DataCanVirtualBank{
         //Deposit Method:
         public float Deposit(float amount, string currency)
         {
-            if (currency.Equals("USD"))//ExchangeRates[0].GetCurrencyId()))
-            {
-                _balance = _balance + (amount * 0.50f);//ExchangeRates[0].GetRateValue());
-            }else if(currency.Equals("MXN"))
-            {
-                _balance = _balance + (amount * 10.00f);
-            }else if(currency.Equals("EUR"))
-            {
-                _balance = _balance + (amount * 0.25f);
-            }else if(currency.Equals("CAD"))
-            {
-                _balance = _balance + (amount * 1.00f);
-            }else{
-                throw new ArgumentException("Currency","Currency not valid");
+            switch (currency) {
+                case "USD":
+                   _balance = _balance + (amount / 0.50f);
+                    break;
+                case "MXN":
+                    _balance = _balance + (amount / 10.00f);
+                    break;
+                case "EUR":
+                    _balance = _balance + (amount / 0.25f);
+                    break;
+                case "CAD":
+                    _balance = _balance + (amount / 1.00f);
+                    break;
+                default:
+                    throw new ArgumentException("Currency not found.");
             }
-            return _balance;                     
+            return _balance;
+            
         }
 
         //Withdraw Method:
         public float Withdraw(float amount, string currency)
         {
-            if (_balance < 0)
-                throw new ArgumentException("Balance","Your current balance does not allow you to perform the transaction");
-
-                if (currency.Equals("USD"))
-                {
-                    _balance = _balance - (amount * 0.50f);
-                }else if(currency.Equals("MXN"))
-                {
-                    _balance = _balance - (amount * 10.00f);
-                }else if(currency.Equals("EUR"))
-                {
-                    _balance = _balance - (amount * 0.25f);
-                }else if(currency.Equals("CAD"))
-                {
-                    _balance = _balance - (amount * 1.00f);
-                }else{
-                    throw new ArgumentException("Currency","Currency not valid");
-                }
-                return _balance;
+            switch (currency)
+            {
+                case "USD":
+                    _balance = _balance - (amount / 0.50f);
+                    break;
+                case "MXN":
+                    _balance = _balance - (amount / 10.00f);
+                    break;
+                case "EUR":
+                    _balance = _balance - (amount / 0.25f);
+                    break;
+                case "CAD":
+                    _balance = _balance - (amount / 1.00f);
+                    break;
+                default:
+                    throw new ArgumentException("Currency not found.");
+            }
+            return _balance;
         }
     }
 }
-
-/*
-  public static class Globals{
-        private static readonly List<ExchangeRate> ExchangeRates = new();
-        //List<ExchangeRate> ExchangeRates = new List<ExchangeRate>();
-        {
-            List<ExchangeRate>
-        }
-    }
-        /*public ExchangeRate usd;
-            usd = new ExchangeRate("USD",0.50f);
-            ExchangeRates.Add(usd);
-            var mxn = new ExchangeRate("MXN",10.0f);
-        ExchangeRates.Add(mxn);
-        var eur = new ExchangeRate("EUR",0.25f);
-        ExchangeRates.Add(eur);
-        var cad = new ExchangeRate("CAD",1.00f);
-        ExchangeRates.Add(cad);
-    }*/

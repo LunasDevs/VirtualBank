@@ -50,4 +50,3 @@ namespace DataCanVirtualBank{
             this._lastName = lastName;
         }
     }
-}

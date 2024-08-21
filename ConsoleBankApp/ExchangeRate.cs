@@ -1,12 +1,16 @@
 namespace DataCanVirtualBank{
 
     public class ExchangeRate{
-        private string _currencyId;
-        //public int Date;
-        private float _rateValue;
+        public required int _id { get; set; } //_currencyId
+
+        public required string _currency { get; set; }
+
+
+        //public float //_rateValue { get; set; }
+
 
         //Getters
-        public string GetCurrencyId()
+        /*public string GetCurrencyId()
         {
             return _currencyId;
         }
@@ -31,6 +35,5 @@ namespace DataCanVirtualBank{
         {
             this._currencyId = currency;
             this._rateValue = value;
-        }
+        }*/
     }
-}
