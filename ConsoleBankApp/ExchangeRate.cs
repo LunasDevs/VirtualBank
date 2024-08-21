@@ -37,4 +37,3 @@ namespace DataCanVirtualBank{
             this._rateValue = value;
         }*/
     }
-}

@@ -1,0 +1,14 @@
+c:\Users\linas\VirtualBank\ConsoleBankApp\bin\Debug\net8.0\ConsoleBankApp.exe
+c:\Users\linas\VirtualBank\ConsoleBankApp\bin\Debug\net8.0\ConsoleBankApp.deps.json
+c:\Users\linas\VirtualBank\ConsoleBankApp\bin\Debug\net8.0\ConsoleBankApp.runtimeconfig.json
+c:\Users\linas\VirtualBank\ConsoleBankApp\bin\Debug\net8.0\ConsoleBankApp.dll
+c:\Users\linas\VirtualBank\ConsoleBankApp\bin\Debug\net8.0\ConsoleBankApp.pdb
+c:\Users\linas\VirtualBank\ConsoleBankApp\obj\Debug\net8.0\ConsoleBankApp.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\linas\VirtualBank\ConsoleBankApp\obj\Debug\net8.0\ConsoleBankApp.AssemblyInfoInputs.cache
+c:\Users\linas\VirtualBank\ConsoleBankApp\obj\Debug\net8.0\ConsoleBankApp.AssemblyInfo.cs
+c:\Users\linas\VirtualBank\ConsoleBankApp\obj\Debug\net8.0\ConsoleBankApp.csproj.CoreCompileInputs.cache
+c:\Users\linas\VirtualBank\ConsoleBankApp\obj\Debug\net8.0\ConsoleBankApp.dll
+c:\Users\linas\VirtualBank\ConsoleBankApp\obj\Debug\net8.0\refint\ConsoleBankApp.dll
+c:\Users\linas\VirtualBank\ConsoleBankApp\obj\Debug\net8.0\ConsoleBankApp.pdb
+c:\Users\linas\VirtualBank\ConsoleBankApp\obj\Debug\net8.0\ConsoleBankApp.genruntimeconfig.cache
+c:\Users\linas\VirtualBank\ConsoleBankApp\obj\Debug\net8.0\ref\ConsoleBankApp.dll
