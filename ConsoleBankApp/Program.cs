@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
+
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
@@ -17,27 +17,6 @@ namespace DataCanVirtualBank{
             var tstAccount = customer.CheckingAccounts[0].GetBalance();
             var txtWelcome = string.Concat("Welcome, " + customer.GetName() + " " + customer.GetLastName() + "!");
             
-            /*
-            //Exchange Rates Definition:
-            List<ExchangeRate> ExchangeRates = new List<ExchangeRate>();
-            var usd = new ExchangeRate("USD",0.50f);
-            ExchangeRates.Add(usd);
-            var mxn = new ExchangeRate("MXN",10.0f);
-            ExchangeRates.Add(mxn);
-            var eur = new ExchangeRate("EUR",0.25f);
-            ExchangeRates.Add(eur);
-            var cad = new ExchangeRate("CAD",1.00f);
-            ExchangeRates.Add(cad); 
-
-            //Print Rates
-            var i = 0;
-            Console.WriteLine("Rates:");
-            while (i < ExchangeRates.Count)
-            {
-                Console.WriteLine($"{Environment.NewLine} {ExchangeRates[i].GetCurrencyId()} {ExchangeRates[i].GetRateValue()}");
-                i++;
-            }
-            */
             //Tests:
             Console.WriteLine("Original balance in CAD: ");
             Console.WriteLine(tstAccount);
