@@ -1,6 +1,8 @@
-namespace DataCanVirtualBank{
+namespace DataCanVirtualBank
+{
 
-    public class ExchangeRate{
+    public class ExchangeRate
+    {
         public required int _id { get; set; } //_currencyId
 
         public required string _currency { get; set; }
@@ -37,3 +39,4 @@ namespace DataCanVirtualBank{
             this._rateValue = value;
         }*/
     }
+}

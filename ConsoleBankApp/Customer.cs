@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 
-namespace DataCanVirtualBank{
-    public class Customer{
+namespace DataCanVirtualBank
+{
+    public class Customer
+    {
         private int _id;
         private string _name;
         private string _lastName;
@@ -50,3 +52,4 @@ namespace DataCanVirtualBank{
             this._lastName = lastName;
         }
     }
+}
